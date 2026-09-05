@@ -142,6 +142,10 @@ app.get('/api/reverse-geocode', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Weather API running on http://localhost:${PORT}`);
-});
+export default app;
+
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`Weather API running on http://localhost:${PORT}`);
+  });
+}
