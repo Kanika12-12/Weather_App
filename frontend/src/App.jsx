@@ -3,6 +3,8 @@ import SearchBar from './components/SearchBar';
 import WeatherDisplay from './components/WeatherDisplay';
 import LoadingSpinner from './components/LoadingSpinner';
 import './App.css';
+const GEOCODING_API = "https://geocoding-api.open-meteo.com/v1/search";
+const WEATHER_API = "https://api.open-meteo.com/v1/forecast";
 
 const getWeatherTheme = (weatherCode) => {
   if ([0].includes(weatherCode)) return 'clear';
